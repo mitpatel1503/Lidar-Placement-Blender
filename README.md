@@ -43,7 +43,9 @@ To run Blender from VS Code:
 To use the `.urdf.xacro` files, you must first convert them to standard `.urdf` files using this ROS command:
 
 ```bash
-rosrun xacro xacro -o [OUTPUT_PATH/my_robot.urdf] [INPUT_PATH/my_robot.xacro.urdf] robot_namespace:=""
+rosrun xacro xacro -o [OUTPUT_PATH/my_robot.urdf] [INPUT_PATH/my_robot.xacro.urdf] robot_namespace:="" 
+```
+
 
 
 ## 5. Recreating simulaiton
