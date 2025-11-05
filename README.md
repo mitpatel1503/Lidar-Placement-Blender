@@ -36,9 +36,9 @@ To run Blender from VS Code:
     * **Repo Link:** [https://github.com/ln-12/blainder-range-scanner](https://github.com/ln-12/blainder-range-scanner)
 2.  Follow the installation steps in the repository's `README.md` to install the `.zip` folder as a Blender addon.
 
-4. Utility Commands
 
-### Convert `.xacro` to `.urdf`
+
+## 4. Convert `.xacro` to `.urdf`
 
 To use the `.urdf.xacro` files, you must first convert them to standard `.urdf` files using this ROS command:
 
