@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="a320_ceo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find evitado_description)/urdfs/airplanes/templates/airplane.urdf.xacro" />
+
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+
+  <xacro:property name="plane_body_length" value="37.57" />
+  <xacro:property name="base_height" value="3.00" />
+  <xacro:property name="track" value="3.795" />
+  <xacro:property name="nose_wheel" value="5.07" />
+  <xacro:property name="wheelbase_front" value="-5.07" />
+  <xacro:property name="wheelbase_rear" value="-17.71" />
+  <xacro:property name="wheel_radius" value="0.098" />
+  <xacro:property name="wheel_width" value="0.040" />
+  <xacro:arg name="center_to_center_of_rot_offset" default="1.075" />
+
+  <xacro:property name="front_sensor_translation" value = "-1.32 -0.1 -1.52"/>
+  <xacro:property name="front_sensor_orientation_rpy" value = "${M_PI+0.08} -0.1 ${M_PI-0.03}"/>
+
+  <xacro:property name="rear_sensor_translation" value = "-25.90 0.05 -1.42"/>
+  <xacro:property name="rear_sensor_orientation_rpy" value = "${M_PI-0.005} -0.09 ${M_PI-0.01}"/>
+
+  <xacro:property name="front_mti_1_translation" value = "0.0 0.0977 -0.191"/>
+  <xacro:property name="front_mti_1_orientation_rpy" value = "${-M_PI/2.0} ${-M_PI/2.0} 0.0"/>
+
+  <xacro:airplane name="a320_ceo">
+    <origin xyz="${front_sensor_translation}" rpy="${front_sensor_orientation_rpy}" />
+    <origin xyz="${rear_sensor_translation}" rpy="${rear_sensor_orientation_rpy}" />
+    <origin xyz="${front_mti_1_translation}" rpy="${front_mti_1_orientation_rpy}" />
+  </xacro:airplane>
+</robot>

@@ -1,0 +1,23 @@
+# Python cache and environments
+__pycache__/
+*.pyc
+venv/
+
+# Blender temporary and backup files
+*.blend1
+*.blend2
+*.blend@
+*.tmp
+*.log
+
+# Generated LiDAR outputs (too large for GitHub)
+Outputs/
+*.csv
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/

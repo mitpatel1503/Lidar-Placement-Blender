@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="t5" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find evitado_description)/urdfs/tugs/templates/tug_towbarless.urdf.xacro" />
+
+
+  <xacro:property name="tug_length" value="2.560"/>
+  <xacro:property name="tug_width" value="2.104"/>
+  <xacro:property name="tug_height" value="0.45"/>
+
+  <xacro:property name="tug_sensor_translation" value = "1.0 0.0 ${tug_height/2.0 + 0.1}"/>
+  <xacro:property name="tug_sensor_orientation_rpy" value = "0.0 0.0 0.0"/>
+
+  <xacro:property name="rear_wheel_track_width" value="1.7"/>
+  <xacro:property name="front_wheel_track_width" value="1.0"/>
+
+  <xacro:property name="wheelbase_front" value="0.93" />
+  <xacro:property name="wheelbase_rear" value="-0.65 " />
+  <xacro:property name="front_wheel_radius" value="0.2" />
+  <xacro:property name="rear_wheel_radius" value="0.2" />
+
+  <!-- Define capture point properties -->
+  <xacro:property name="capture_point_translation" value="-0.750 -0.0026 0.773"/><!--base_link_tug to capture_point-->
+  <xacro:property name="capture_point_orientation" value="0 0 0"/>
+
+  <xacro:tug_towbarless name="t5" capture_point_xyz="${capture_point_translation}" capture_point_rpy="${capture_point_orientation}">
+    <origin xyz="${tug_sensor_translation}" rpy="${tug_sensor_orientation_rpy}" />
+  </xacro:tug_towbarless>
+</robot>
